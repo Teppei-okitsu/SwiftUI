@@ -8,6 +8,7 @@ The scene delegate.
 import UIKit
 import SwiftUI
 
+@available(iOS 14.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -20,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use a UIHostingController as window root view controller
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: LandmarkDetail())
+            window.rootViewController = UIHostingController(rootView: LandmarkList())
             self.window = window
             window.makeKeyAndVisible()
         }
